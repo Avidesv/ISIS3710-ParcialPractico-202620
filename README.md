@@ -6,6 +6,6 @@ No hay suficiente contraste
 Ubicación (archivo y línea):plans/page.tsx 19 y 37
 Herramienta que lo detectó: Lighthouse
 Regla o principio incumplido: Estándares
-Por qué es un problema o caso especifico: Porque dificulta la visibilidad
+Por qué es un problema o caso especifico: Porque dificulta la visibilidad de la información del plan
 Correción: Se subió el text slate a 600
 
