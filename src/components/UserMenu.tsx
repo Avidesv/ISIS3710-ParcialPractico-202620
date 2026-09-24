@@ -18,9 +18,11 @@ export default function UserMenu() {
   if (session.id) {
     return (
       <div className="flex items-center gap-6">
-        <div className="bg-blue-600 text-white text-lg font-semibold rounded-xl px-6 py-3 cursor-pointer">
-          + Crear Plan
-        </div>
+        <Link
+          href="/plans/new"
+          className="bg-blue-600 text-white text-lg font-semibold rounded-xl px-6 py-3"
+>         + Crear Plan
+        </Link>
         <div className="flex items-center gap-3 border-l border-slate-200 pl-6">
           <svg
             xmlns="http://www.w3.org/2000/svg"

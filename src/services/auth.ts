@@ -1,3 +1,5 @@
+import { getSession } from "./session";
+
 // La URL del back se configura en el archivo .env.local (ver .env.example)
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
@@ -25,10 +27,10 @@ export async function register(
   name: string,
   password: string
 ) {
-  const response = await fetch(`${API_URL}/users/signin`, {
+  const response = await fetch(`${API_URL}/plans`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ userName: username, email, name, password }),
+    body: JSON.stringify({ userName: username, email, name, password, userID: getSession }),
   });
 
   const data = await response.json();

@@ -16,7 +16,7 @@ export default async function PlansPage() {
               className="w-full h-60 object-cover rounded-xl"
             />
             <h4 className="text-2xl text-slate-900 mt-3">{plan.name}</h4>
-            <p className="flex items-center text-sm text-slate-300">
+            <p className="flex items-center text-sm text-slate-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -34,7 +34,7 @@ export default async function PlansPage() {
               {plan.creator.name}
             </p>
             <div className="flex justify-between items-center mt-1">
-              <p className="text-slate-300">
+              <p className="text-slate-600">
                 Aproximado: ${plan.estimatedPrice}
               </p>
               <p className="flex items-center text-slate-500">

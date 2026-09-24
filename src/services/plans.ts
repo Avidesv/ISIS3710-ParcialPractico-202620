@@ -32,6 +32,30 @@ export type Plan = {
   };
 };
 
+export type CreatePlanInput = {
+  name: string;
+  description: string;
+  estimatedPrice: number;
+  estimatedTime: number;
+  recomendations: string;
+  address: string;
+  image: string;
+  userId: string;
+};
+
+export async function createPlan(plan: CreatePlanInput) {
+  const response = await fetch(`${API_URL}/plans`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(plan),
+  });
+
+  if (!response.ok) {
+    const data = await response.json();
+    throw new Error(data.message || "No se pudo publicar el plan");
+  }
+}
+
 // Pide al back la lista de todos los planes
 export async function getPlans(): Promise<PlanSummary[]> {
   const response = await fetch(`${API_URL}/plans`, { cache: "no-store" });
